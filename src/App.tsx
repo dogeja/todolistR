@@ -1,6 +1,5 @@
-import React from "react";
 import { createGlobalStyle } from "styled-components";
-import ToDolist from "./ToDoList";
+import ToDoList from "./components/ToDoList";
 
 const GrobalStyle = createGlobalStyle`
 
@@ -43,7 +42,7 @@ footer, header, hgroup, main, menu, nav, section {
 body {
   line-height: 1;
 }
-menu, ol, ul {
+menu, ol, ul, li {
   list-style: none;
 }
 blockquote, q {
@@ -63,7 +62,7 @@ table {
 }
 body{
   background-color: ${(props) => props.theme.bgColor};
-  color: ${(props) => props.theme.textColor};
+  color: ${(props) => props.theme.listColor};
 }
 a{
   text-decoration: none;
@@ -74,7 +73,7 @@ function App() {
   return (
     <>
       <GrobalStyle />
-      <ToDolist></ToDolist>
+      <ToDoList></ToDoList>
     </>
   );
 }
