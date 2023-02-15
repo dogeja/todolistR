@@ -1,5 +1,5 @@
-import { useSetRecoilState } from "recoil";
-import { Categories, IToDo, toDoState } from "../atoms";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { Categories, IToDo, toDoSelector, toDoState } from "../atoms";
 import styled from "styled-components";
 
 const List = styled.li`
@@ -41,6 +41,7 @@ const List = styled.li`
 `;
 
 function ToDo({ text, category, id }: IToDo) {
+  const toDos = useRecoilValue(toDoSelector);
   const setCategory = useSetRecoilState(toDoState);
   const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const {

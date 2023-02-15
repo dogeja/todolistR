@@ -33,18 +33,35 @@ const Select = styled.select`
   font-weight: 700;
 `;
 const Contents = styled.article`
-  position: relative;
-  font-family: "NanumSquareNeo-Variable";
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  width: 81.25%;
-  align-items: left;
-  img {
-    width: 200px;
-    height: 200px;
-    margin: 50px auto;
+  @media all and (min-width: 770px) {
+    position: relative;
+    font-family: "NanumSquareNeo-Variable";
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: left;
+    img {
+      width: 200px;
+      height: 200px;
+      margin: 50px auto;
+    }
+  }
+  @media all and (max-width: 769px) {
+    position: relative;
+    font-family: "NanumSquareNeo-Variable";
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 81.25%;
+    align-items: left;
+    img {
+      width: 200px;
+      height: 200px;
+      margin: 50px auto;
+    }
   }
 `;
 function ToDoList() {

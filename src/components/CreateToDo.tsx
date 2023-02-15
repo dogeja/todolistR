@@ -20,7 +20,6 @@ const Form = styled.form`
     transition: 0.4s;
     box-sizing: border-box;
     &:hover {
-      border: none;
       background-color: rgba(255, 255, 255, 0.8);
     }
     &:active {
